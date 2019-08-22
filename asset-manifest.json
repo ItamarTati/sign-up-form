@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/sign-up-form/static/css/main.2cce8147.chunk.css",
+    "main.js": "/sign-up-form/static/js/main.8e106bdf.chunk.js",
+    "main.js.map": "/sign-up-form/static/js/main.8e106bdf.chunk.js.map",
+    "runtime~main.js": "/sign-up-form/static/js/runtime~main.44a19ecd.js",
+    "runtime~main.js.map": "/sign-up-form/static/js/runtime~main.44a19ecd.js.map",
+    "static/js/2.4bd5643d.chunk.js": "/sign-up-form/static/js/2.4bd5643d.chunk.js",
+    "static/js/2.4bd5643d.chunk.js.map": "/sign-up-form/static/js/2.4bd5643d.chunk.js.map",
+    "index.html": "/sign-up-form/index.html",
+    "precache-manifest.88629d070f605c57804e6591c9128355.js": "/sign-up-form/precache-manifest.88629d070f605c57804e6591c9128355.js",
+    "service-worker.js": "/sign-up-form/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/sign-up-form/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/sign-up-form/static/media/logo.5d5d9eef.svg"
+  }
+}
