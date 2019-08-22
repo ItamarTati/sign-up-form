@@ -1,18 +1,32 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import MultiStepFormFirstPage from './MultiStepFormFirstPage';
+import MultiStepFormSecondPage from './MultiStepFormSecondPage';
+import MultiStepFormThirdPage from './MultiStepFormThirdPage';
 
 
-class WizardForm extends Component {
 
+class MultiStepForm extends Component {
+    constructor(props) {
+        super(props);
+        this.nextPage = this.nextPage.bind(this);
+        this.state = {
+          page: 1,
+        };
+      }
+      nextPage() {
+        this.setState({ page: this.state.page + 1 });
+      }
     render() {
-
-      return (
-        <div>
-            <h1>Hello World</h1>
+        const { onSubmit } = this.props;
+        const { page } = this.state;
+        return (
+          <div>
+            {page === 1 && <MultiStepFormFirstPage onSubmit={this.nextPage} />}
         </div>
       );
     }
   }
   
   
-  export default WizardForm;
+  export default MultiStepForm;
