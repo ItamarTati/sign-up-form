@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './index.css';
 import PropTypes from 'prop-types';
 import MultiStepFormFirstPage from './MultiStepFormFirstPage';
 import MultiStepFormSecondPage from './MultiStepFormSecondPage';
@@ -23,7 +24,9 @@ class MultiStepForm extends Component {
         return (
           <div>
             {page === 1 && <MultiStepFormFirstPage onSubmit={this.nextPage} />}
+            {page === 2 && <MultiStepFormSecondPage onSubmit={this.nextPage} />}
         </div>
+        
       );
     }
   }
