@@ -7,34 +7,35 @@ import renderField from './renderField';
 const MultiStepFormFirstPage = props => {
   const { handleSubmit } = props;
   return (
-    <form onSubmit={handleSubmit}>
-        <Field
+    <form onSubmit={handleSubmit} className="msform-box">
+        <Field 
+            id = 'msform fieldset' 
             name="name"
             type="text"
             component={renderField}
-            label="Name"
+            label="Name:"
         />
         <Field
             name="role"
             type="text"
             component={renderField}
-            label="Role"
+            label="Role:"
         />
         <Field 
             name="email" 
             type="email" 
             component={renderField} 
-            label="Email" 
+            label="Email:" 
         />
         <Field
             name="password"
             type="password"
             component={renderField}
-            label="password"
+            label="Password:"
         />
         
-      <div>
-        <button type="submit" className="next">Next</button>
+      <div className = 'button-container'>
+        <button type="submit" className="msform-action-button">Submit</button>
       </div>
     </form>
   );

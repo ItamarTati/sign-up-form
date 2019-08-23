@@ -7,9 +7,9 @@ import MultiStepForm from './MultiStepForm';
 
 const rootEl = document.getElementById("root");
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={store} >
       <div style={{ padding: 15 }}>
-        <h2>Wizard Example</h2>
+        <h1>MultiStepForm</h1>
         <MultiStepForm  />
       </div>
     </Provider>,

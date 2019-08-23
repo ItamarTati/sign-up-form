@@ -1,12 +1,11 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import validate from './validate';
-import renderField from './renderField';
 
 const MultiStepFormSecondPage = props => {
     const { handleSubmit } = props;
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="msform-box">
             <div>
                 <label htmlFor="updates">Receive updates about Tray.io product by email</label>
                 <div>
@@ -39,7 +38,7 @@ const MultiStepFormSecondPage = props => {
 };
 
             export default reduxForm({
-            form: 'wizard', //                 <------ same form name
+            form: 'multi', //                 <------ same form name
             destroyOnUnmount: false, //        <------ preserve form data
             forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
             validate,

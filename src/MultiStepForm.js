@@ -22,9 +22,10 @@ class MultiStepForm extends Component {
         const { onSubmit } = this.props;
         const { page } = this.state;
         return (
-          <div>
+          <div  className = 'msform'>
             {page === 1 && <MultiStepFormFirstPage onSubmit={this.nextPage} />}
             {page === 2 && <MultiStepFormSecondPage onSubmit={this.nextPage} />}
+            {page === 3 && <MultiStepFormThirdPage onSubmit={onSubmit} />}
         </div>
         
       );
