@@ -1,45 +1,52 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import validate from './validate';
+import renderField from './renderField';
 
 const MultiStepFormSecondPage = props => {
-    const { handleSubmit } = props;
+    const { handleSubmit, pristine, submitting } = props;
     return(
         <form onSubmit={handleSubmit} className="msform-box">
-            <div>
+            <div className="checkbox-wrapper">
                 <label htmlFor="updates">Receive updates about Tray.io product by email</label>
                 <div>
                     <Field
                     name="updates"
                     id="updates"
-                    component="input"
+                    component={renderField}
                     type="checkbox"
                     />
                 </div>
             </div>
-            <div>
+            <div className="checkboxes">
                 <label htmlFor="communication">Receive communication by email for other products created by Tray.io</label>
                 <div>
                     <Field
                     name="communication"
                     id="communication"
-                    component="input"
+                    component={renderField}
                     type="checkbox"
                     />
                 </div>
             </div>
+            <div>
+                <label htmlFor="employed">Employed</label>
+            <div>
+                <input type="checkbox" name="employed" value="true" id="employed"/>
+            </div>
+            </div>
 
-        
-      <div>
-        <button type="submit" className="next">Next</button>
+            <button type="submit" disabled={pristine || submitting}>Submit</button>  
+    <div className = 'button-container'>
+        <button  type="submit" className="msform-action-button" disabled={pristine || submitting}>Submit</button>
       </div>
     </form>
   );
 };
 
-            export default reduxForm({
-            form: 'multi', //                 <------ same form name
-            destroyOnUnmount: false, //        <------ preserve form data
-            forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-            validate,
-            })(MultiStepFormSecondPage);
+export default reduxForm({
+form: 'multi', 
+destroyOnUnmount: false, 
+forceUnregisterOnUnmount: true, 
+validate,
+})(MultiStepFormSecondPage);

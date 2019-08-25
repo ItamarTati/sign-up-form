@@ -12,8 +12,7 @@ const validate = values => {
     errors.password = 'Required';
   }
   else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{10,}$/i.test(values.password)){
-    errors.password = `Invalid Password, must include a uppercase letter, a lower 
-    case letter, a number and must 10 characters long, I recommend ILoveRedux10`
+    errors.password = 'Needs to contain more than 10 characters, include an uppercase and lowercase letter';
   }
   return errors;
 };
