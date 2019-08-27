@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './index.css';
-import PropTypes from 'prop-types';
 import MultiStepFormFirstPage from './MultiStepFormFirstPage';
 import MultiStepFormSecondPage from './MultiStepFormSecondPage';
 import MultiStepFormThirdPage from './MultiStepFormThirdPage';
@@ -31,12 +30,12 @@ class MultiStepForm extends Component {
       
 
     render() {
-        // const { onSubmit } = this.props;
         const { page } = this.state;
         
         
         return (
           <div  className = 'msform'>
+            {page === 1 ? <div>1</div> : <div>2</div>}
             {page === 1 && <MultiStepFormFirstPage onSubmit={this.nextPage} />}
             {page === 2 && <MultiStepFormSecondPage  onSubmit={ this.nextPageSubmission }/>}
             {page === 3 && <MultiStepFormThirdPage  /> }
@@ -48,10 +47,7 @@ class MultiStepForm extends Component {
     }
   }
 
-  MultiStepForm.propTypes = {
-    onSubmit: PropTypes.func.isRequired,
-  };
-  
+
   
   
   export default MultiStepForm;

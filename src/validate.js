@@ -11,9 +11,9 @@ const validate = values => {
   if (!values.password) {
     errors.password = 'Required';
   }
-  else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{10,}$/i.test(values.password)){
-    errors.password = 'Needs to contain more than 10 characters, include an uppercase and lowercase letter';
-  }
+  // else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{10,}$/i.test(values.password)){
+  //   errors.password = 'Needs to contain more than 10 characters, include an uppercase and lowercase letter';
+  // }
   return errors;
 };
 

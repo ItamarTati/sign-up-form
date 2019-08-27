@@ -10,7 +10,6 @@ const MultiStepFormFirstPage = props => {
   return (
     <form onSubmit={handleSubmit} className="msform-box">
         <Field 
-            id = 'msform fieldset' 
             name="name"
             type="text"
             component={renderField}

@@ -7,36 +7,33 @@ const MultiStepFormSecondPage = props => {
     const { handleSubmit, pristine, submitting } = props;
     return(
         <form onSubmit={handleSubmit} className="msform-box">
-            <div className="checkbox-wrapper">
+            
+            
+                <div className='checkbox'>
                 <label htmlFor="updates">Receive updates about Tray.io product by email</label>
-                <div>
-                    <Field
+                <div >
+                    <Field 
                     name="updates"
                     id="updates"
                     component={renderField}
                     type="checkbox"
+                    value="true"
                     />
                 </div>
             </div>
-            <div className="checkboxes">
-                <label htmlFor="communication">Receive communication by email for other products created by Tray.io</label>
-                <div>
-                    <Field
+            
+            <div className='checkbox'>
+            <label htmlFor="communication">Receive communication by email for other products created by Tray.io</label>
+                <div >
+                    <Field 
                     name="communication"
                     id="communication"
                     component={renderField}
                     type="checkbox"
                     />
-                </div>
-            </div>
-            <div>
-                <label htmlFor="employed">Employed</label>
-            <div>
-                <input type="checkbox" name="employed" value="true" id="employed"/>
-            </div>
-            </div>
-
-            <button type="submit" disabled={pristine || submitting}>Submit</button>  
+                    </div>
+                    </div>                
+      
     <div className = 'button-container'>
         <button  type="submit" className="msform-action-button" disabled={pristine || submitting}>Submit</button>
       </div>
