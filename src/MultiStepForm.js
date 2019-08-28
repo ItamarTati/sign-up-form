@@ -35,7 +35,24 @@ class MultiStepForm extends Component {
         
         return (
           <div  className = 'msform'>
-            {page === 1 ? <div>1</div> : <div>2</div>}
+            {page === 1 ? <ul className='page-indicator'>
+                            <li className='highlighted'>User</li>
+                            <li>Privacy</li>
+                            <li>Done</li>
+                          </ul>: 
+            page === 2 ? <ul className='page-indicator'>
+                           <li >User</li>
+                           <li className='highlighted'>Privacy</li>
+                           <li>Done</li>
+                         </ul>:
+                         <ul className='page-indicator'>
+                           <li >User</li>
+                           <li >Privacy</li>
+                           <li className='highlighted'>Done</li>
+                          </ul>}
+            
+            
+            
             {page === 1 && <MultiStepFormFirstPage onSubmit={this.nextPage} />}
             {page === 2 && <MultiStepFormSecondPage  onSubmit={ this.nextPageSubmission }/>}
             {page === 3 && <MultiStepFormThirdPage  /> }
