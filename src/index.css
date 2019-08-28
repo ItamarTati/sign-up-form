@@ -37,7 +37,10 @@ h1{
   width: 80%;
 	margin: 0 10%;
 }
-
+.required::after { 
+  content: "*";
+  color: #C73030;
+}
 
 .msform input, .msform textarea {
 	padding: 15px;

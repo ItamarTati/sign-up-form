@@ -9,29 +9,30 @@ const MultiStepFormFirstPage = props => {
   const { handleSubmit } = props;
   return (
     <form onSubmit={handleSubmit} className="msform-box">
+        <label className = 'required'>Name:</label>
         <Field 
             name="name"
             type="text"
             component={renderField}
-            label="Name:"
+
         />
+        <label className = 'required'>Role:</label>
         <Field
             name="role"
             type="text"
             component={renderField}
-            label="Role:"
         />
+        <label className = 'required'>Email:</label>
         <Field 
             name="email" 
             type="email" 
             component={renderField} 
-            label="Email:" 
         />
+        <label className = 'required'>Password:</label>
         <Field
             name="password"
             type="password"
             component={renderField}
-            label="Password:"
         />
         
       <div className = 'button-container'>
